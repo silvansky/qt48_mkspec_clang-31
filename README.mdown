@@ -1,4 +1,5 @@
 Mac OS X Qt 4.8 mkspec files for Clang 3.1 with libc++.
+============
 
 Requirements
 ============
@@ -12,6 +13,7 @@ Installation
 ============
 
 Copy all files (with sudo) in /usr/local/Qt4.8/mkspec/
+
         sudo cp * /usr/local/Qt4.8/mkspec/
 
 After copying, you should add new Tool Chain in Qt Creator in Settings -> Build & Run -> Tool Chains -> Add -> Clang
@@ -19,4 +21,5 @@ After copying, you should add new Tool Chain in Qt Creator in Settings -> Build 
 Rename new Tool Chain to "Clang-3.1" or something. In its props set Compiler path to "/usr/local/bin/clang-3.1", Debugger to "gdb" and mkspec to "unsupported/macx-clang31". Now you can select this Tool Chain in your project's properties.
 
 To use this mkspec from command line, you should specify it in qmake's args:
+
         qmake -spec unsupported/macx-clang31
